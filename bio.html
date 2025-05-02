@@ -183,6 +183,27 @@
             0% { opacity: 0; transform: translateY(-20px); }
             100% { opacity: 1; transform: translateY(0); }
         }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 0.5rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            .theme-toggle {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
