@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team - Movement for Improvement</title>
+    <style>
+        :root {
+            --bg-light: #f9f9ff;
+            --text-light: #1a1a1a;
+            --card-light: #fff;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+
+            --bg-dark: #1e1e2f;
+            --text-dark: #eaeaea;
+            --card-dark: #2a2a3d;
+            --shadow-dark: rgba(255, 255, 255, 0.05);
+        }
+
+        [data-theme="light"] {
+            --bg: var(--bg-light);
+            --text: var(--text-light);
+            --card: var(--card-light);
+            --shadow: var(--shadow-light);
+        }
+
+        [data-theme="dark"] {
+            --bg: var(--bg-dark);
+            --text: var(--text-dark);
+            --card: var(--card-dark);
+            --shadow: var(--shadow-dark);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            transition: all 0.3s ease-in-out;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--card);
+            box-shadow: 0 4px 20px var(--shadow);
+            border-radius: 12px;
+            overflow: hidden;
+            width: 300px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin: 1rem;
+            border-radius: 50%;
+        }
+
+        .card-info {
+            padding: 1rem;
+        }
+
+        .card-info h3 {
+            margin: 0 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .card-info p {
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+<h1>Meet Our Team</h1>
+<div class="card-container">
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Person 1">
+        <div class="card-info">
+            <h3>a</h3>
+            <p>a</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Person 2">
+        <div class="card-info">
+            <h3>a</h3>
+            <p>a</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Person 3">
+        <div class="card-info">
+            <h3>a</h3>
+            <p>a</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Person 4">
+        <div class="card-info">
+            <h3>a</h3>
+            <p>a</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Person 5">
+        <div class="card-info">
+            <h3>a</h3>
+            <p>a</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
