@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Team - Movement for Improvement</title>
+    <link rel="icon" href="static/img/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --bg-light: linear-gradient(to bottom, #fdfdfd, #eae6ff);
+            --bg-light: linear-gradient(to bottom, #f8fff8, #f0f8e8);
             --text-light: #1a1a1a;
-            --primary-light: #5c33f6;
-            --accent-light: #ffb84d;
+            --primary-light: #2e7d32;
+            --accent-light: #ffd600;
             --card-light: #ffffff;
             --shadow-light: rgba(0, 0, 0, 0.1);
 
-            --bg-dark: linear-gradient(to bottom, #1c1c1c, #2a2a2a);
+            --bg-dark: linear-gradient(to bottom, #0a1f0a, #1a2a10);
             --text-dark: #f0f0f0;
-            --primary-dark: #8e7fff;
-            --accent-dark: #ffd580;
-            --card-dark: #2f2f2f;
+            --primary-dark: #4caf50;
+            --accent-dark: #ffeb3b;
+            --card-dark: #1e3a1e;
             --shadow-dark: rgba(255, 255, 255, 0.08);
         }
 
@@ -79,6 +80,19 @@
             animation: fadeDown 0.8s ease-in-out;
         }
 
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-img {
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
         nav h1 {
             font-size: 1.7rem;
             font-weight: bold;
@@ -129,6 +143,7 @@
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         .card-container {
@@ -138,6 +153,7 @@
             gap: 2rem;
             padding: 2rem;
             animation: fadeIn 1.2s ease;
+            max-width: 1200px;
         }
 
         .card {
@@ -145,37 +161,51 @@
             box-shadow: 0 4px 20px var(--shadow);
             border-radius: 15px;
             overflow: hidden;
-            width: 300px;
+            width: 100%;
+            max-width: 800px;
             display: flex;
             flex-direction: row;
-            align-items: center;
+            align-items: flex-start;
             transition: transform 0.3s ease;
+            padding: 1.5rem;
         }
 
         .card:hover {
-            transform: scale(1.03);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
         }
 
         .card img {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             object-fit: cover;
-            margin: 1rem;
             border-radius: 50%;
+            margin-right: 1.5rem;
+            border: 3px solid var(--accent);
         }
 
         .card-info {
-            padding: 1rem;
+            flex: 1;
+            padding: 0.5rem;
         }
 
         .card-info h3 {
             margin: 0 0 0.5rem;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        .card-info .position {
+            font-weight: bold;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: block;
         }
 
         .card-info p {
-            font-size: 0.95rem;
-            line-height: 1.4;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 0.5rem;
         }
 
         @keyframes fadeIn {
@@ -208,12 +238,26 @@
             .theme-toggle {
                 margin-left: 0;
             }
+
+            .card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .card img {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
         }
     </style>
 </head>
 <body>
 <nav>
-    <h1><a href="index.html" style="color: white; text-decoration: none;">Movement for Improvement</a></h1>
+    <div class="logo-container">
+        <img src="static/img/logo.png" alt="Logo" class="logo-img">
+        <h1><a href="index.html" style="color: white; text-decoration: none;">Movement for Improvement</a></h1>
+    </div>
     <ul>
         <li><a href="index.html#about-us">About Us</a></li>
         <li><a href="index.html#contact-us">Contact Us</a></li>
@@ -227,42 +271,38 @@
     <div class="content">
         <div class="card-container">
             <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Person 1">
+                <img src="https://via.placeholder.com/150" alt="Raghunand Dayanandan">
                 <div class="card-info">
-                    <h3>John Doe</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <h3>Raghunand Dayanandan</h3>
+                    <span class="position">President/Founder</span>
+                    <p>As the Founder and President of Movement for Improvement, I'm passionate about creating opportunities for people, especially youth, to lead positive change through community service, physical activity, and collective action. I started this nonprofit to help others realize that even small actions, like running a mile or assisting a neighbor, can add up to something powerful when we work together.</p>
+                    <p>My leadership experience began with the National Junior Honor Society, where I served as an officer. In that role, I helped organize service events, tutored fellow students, and supported initiatives encouraging academic growth and community involvement. These experiences inspired me to take my passion for service even further by launching my organization.</p>
+                    <p>I'm currently a student at Jasper High School. Outside of school, I enjoy playing tennis, exploring math, and staying involved in community efforts. Whether I'm on the court or planning our next project, I'm always looking for ways to grow, give back, and bring others along with me.</p>
+                    <p>Starting Movement for Improvement has been one of the most meaningful things I've done, and I'm excited to continue building a team that believes in purpose, service, and the power of movement.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Person 2">
+                <img src="https://via.placeholder.com/150" alt="Supraj Gonur">
                 <div class="card-info">
-                    <h3>Jane Smith</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <h3>Supraj Gonur</h3>
+                    <span class="position">Secretary</span>
+                    <p>Hi, I'm Supraj, and I serve as the director. In this role, I help keep things running smoothly—whether that's organizing events, supporting our team's outreach, or just making sure the small details are handled so we can focus on creating real change in our community.</p>
+                    <p>I have been entwined with non-profits in the past, but this is my first time working as a leader in one. I've always been someone who looks for ways to make a difference. I believe impact doesn't come from one big moment—it's built through consistent, meaningful effort. That's what drives me every day.</p>
+                    <p>I'm currently a freshman at Jasper High School. Outside the classroom, I stay pretty active: I'm a violist in the Jasper Orchestra, an officer in our school's Chess Club, and I compete in science fairs and math contests like the AMC. I also like playing basketball in my free time—it helps me stay balanced and energized.</p>
+                    <p>Being part of Movement 4 Improvement is something I take seriously. It's a chance to grow, give back, and show that leadership isn't about age—it's about showing up and caring enough to act.</p>
                 </div>
             </div>
 
             <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Person 3">
+                <img src="https://via.placeholder.com/150" alt="Royce D'Mello">
                 <div class="card-info">
-                    <h3>Mary Johnson</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Person 4">
-                <div class="card-info">
-                    <h3>James Brown</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="https://via.placeholder.com/100" alt="Person 5">
-                <div class="card-info">
-                    <h3>Patricia Davis</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero.</p>
+                    <h3>Royce D'Mello</h3>
+                    <span class="position">Director</span>
+                    <p>As Chief Operating Officer at Movement 4 Improvement, Royce D'mello is focused on building strong operations and helping lead programs that bring positive change to the community. In his role, he supports day-to-day coordination, helps manage outreach efforts, and works with the team to create a meaningful, lasting impact.</p>
+                    <p>While this is his first experience working in the nonprofit world, Royce brings a strong sense of purpose and a genuine drive to make a difference. He is motivated by a personal mission to spark change in the lives of others and believes that real impact begins with small, intentional actions.</p>
+                    <p>Royce is currently a freshman at Jasper High School. Outside of school, he is an active member of Boy Scout Troop 26 and serves as an attorney in Teen Court, where he continues to grow his leadership and advocacy skills. These experiences have helped shape his values and his belief in service, responsibility, and community involvement.</p>
+                    <p>Taking on the role of COO at Movement Improvement is something Royce is proud of. He's passionate about using this opportunity to help others and to prove that no matter your age or experience, you can be a force for good.</p>
                 </div>
             </div>
         </div>
